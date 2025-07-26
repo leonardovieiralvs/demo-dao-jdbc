@@ -1,5 +1,7 @@
 package entities;
 
+import models.dao.impl.SellerDaoJDBC;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
