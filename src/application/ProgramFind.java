@@ -7,7 +7,7 @@ import models.dao.SellerDao;
 
 import java.util.List;
 
-public class Program {
+public class ProgramFind {
 
     public static void main(String[] args) {
 
