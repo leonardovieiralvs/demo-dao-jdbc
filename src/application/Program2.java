@@ -5,10 +5,12 @@ import models.dao.DaoFactory;
 import models.dao.DepartmentDao;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class Program2 {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
         DepartmentDao depDao = DaoFactory.createDepartmentDao();
         System.out.println("=== TEST 1: department findById ===");
         Department dep = depDao.findById(1);
@@ -30,5 +32,11 @@ public class Program2 {
         dep.setName("Dark");
         depDao.update(dep);
         System.out.println("Update completed");
+
+        System.out.println("\n=== TEST 5: department delete ===");
+        System.out.print("Enter id for delete test: ");
+        int id = sc.nextInt();
+        depDao.deleteById(id);
+        System.out.println("Delete completed!");
     }
 }
