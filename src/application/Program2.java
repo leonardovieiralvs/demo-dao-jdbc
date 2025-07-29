@@ -20,9 +20,15 @@ public class Program2 {
             System.out.println(department);
         }
 
-        System.out.println("\n=== TEST 3: department insert ===");
-        dep = new Department(null, "Music");
-        depDao.insert(dep);
-        System.out.println("Successful");
+//        System.out.println("\n=== TEST 3: department insert ===");
+//        dep = new Department(null, "Music");
+//        depDao.insert(dep);
+//        System.out.println("Inserted! New id: " + dep.getId());
+
+        System.out.println("\n=== TEST 4: department update ===");
+        dep = depDao.findById(3);
+        dep.setName("Dark");
+        depDao.update(dep);
+        System.out.println("Update completed");
     }
 }
